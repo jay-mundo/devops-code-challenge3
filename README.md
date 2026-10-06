@@ -6,11 +6,19 @@
 [![Terraform](https://img.shields.io/badge/IaC-Terraform-7B42BC)](#)
 [![Ansible](https://img.shields.io/badge/Configuration-Ansible-EE0000)](#)
 [![Nginx](https://img.shields.io/badge/Web%20Server-Nginx-009639)](#)
+<<<<<<< HEAD
 [![Linux](https://img.shields.io/badge/Linux-Ubuntu-E95420)](#)
 
 ---
 
 ## Table of Contents
+=======
+[![Ubuntu](https://img.shields.io/badge/Linux-Ubuntu-E95420)](#)
+
+---
+
+## 📋 Table of Contents
+>>>>>>> bb4d78c (Expand Challenge 3 documentation)
 
 1. [The 60-Second Summary](#1-the-60-second-summary)
 2. [Start Here: What Is "The Cloud"?](#2-start-here-what-is-the-cloud)
@@ -45,6 +53,7 @@
 31. [Final Deliverables](#31-final-deliverables)
 32. [Project Status](#32-project-status)
 
+<<<<<<< HEAD
 ---
 
 # 1. The 60-Second Summary
@@ -609,11 +618,11 @@ Successful result:
 This proves that Ansible can communicate with the EC2 server.
 19. Ansible Playbook
 The playbook automatically configures the Ubuntu server.
+=======
+>>>>>>> bb4d78c (Expand Challenge 3 documentation)
 ---
-- name: Configure web server
-  hosts: web
-  become: true
 
+<<<<<<< HEAD
   tasks:
 
     - name: Update apt package cache
@@ -1121,3 +1130,37 @@ Together, they create a repeatable and automated deployment process that is much
 Project Completed 🚀
 AWS DevOps Code Challenge 3 — Infrastructure as Code with Terraform and Ansible
 Terraform → AWS → EC2 → Ansible → Nginx → Hello World
+=======
+# 1. The 60-Second Summary
+
+I built a simple **"Hello, World!" web server** on AWS and automated the entire infrastructure and server configuration using **Terraform and Ansible**.
+
+The website itself is intentionally simple.
+
+The real project is everything around it:
+
+| Goal | How it was achieved |
+|---|---|
+| Create cloud infrastructure | **Terraform** |
+| Create an isolated AWS network | **Amazon VPC** |
+| Create a cloud server | **Amazon EC2** |
+| Control network traffic | **Security Group** |
+| Give EC2 an AWS identity | **IAM Role** |
+| Create object storage | **Amazon S3** |
+| Configure the Linux server automatically | **Ansible** |
+| Install a web server | **Nginx** |
+| Deploy the webpage | **Ansible** |
+| Make the website publicly accessible | **EC2 Public IP + HTTP** |
+| Avoid manual AWS configuration | **Infrastructure as Code** |
+
+### The complete automation flow
+
+```mermaid
+flowchart LR
+    A["Developer writes Terraform code"] --> B["Terraform provisions AWS"]
+    B --> C["EC2 Ubuntu server"]
+    C --> D["Ansible connects over SSH"]
+    D --> E["Install Nginx"]
+    E --> F["Deploy index.html"]
+    F --> G["Hello, World!"]
+>>>>>>> bb4d78c (Expand Challenge 3 documentation)
